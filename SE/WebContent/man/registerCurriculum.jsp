@@ -13,7 +13,7 @@
   <body>
     <header id="header">
       <div class="navbar">
-        <a href="../man_main.jsp">학사담당자</a>
+        <a href="../manMain.jsp">학사담당자</a>
         <div class="dropdown">
           <button class="dropbtn">학적관리
             <i class="fa fa-caret-down"></i>
