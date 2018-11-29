@@ -13,7 +13,7 @@
   <body>
     <header id="header">
       <div class="navbar">
-        <a href="../pro_main.jsp">교수</a>
+        <a href="../proMain.jsp">교수</a>
         <a href="registerReport.jsp">성적처리</a>
         <a href="registerLecturePlan.jsp">강의계획서등록</a>
       </div>
