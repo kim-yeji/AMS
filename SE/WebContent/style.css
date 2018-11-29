@@ -1,0 +1,75 @@
+/* �긽�떒 硫붾돱 */
+header {
+  border-bottom: 1px solid grey;
+}
+/* dropdown紐⑸줉 硫붾돱 */
+.navbar {
+  overflow: hidden;
+}
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1C1C1C;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  color: white;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+td{
+  padding: 7px;
+}
+
+
+
+#infotable, #reporttable, #lectimetable {
+	width: 60%;
+	padding: 20px;
+	text-align: center;
+	margin: auto;
+}
+#lecPlantable td {
+	width: 80%;
+	padding: 20px;
+	margin: auto;
+}
+#lecPlantable td button { 
+
+	text-align: center;
+}
+#lecPlantable {
+	width: 80%;
+	padding: 10px;
+	margin: auto;
+}
