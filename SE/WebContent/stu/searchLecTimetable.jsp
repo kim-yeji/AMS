@@ -1,49 +1,49 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@page import="java.util.*"%>
  <%@page import="java.text.SimpleDateFormat"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
   	<meta charset="UTF-8">
-  	<title>°­ÀÇ½Ã°£Ç¥Á¶È¸</title>
+  	<title>ê°•ì˜ì‹œê°„í‘œì¡°íšŒ</title>
   	<link rel="stylesheet" type="text/css" href="../style.css">
   	<script src="main.js" type="text/javascript"></script>
   </head>
   <body>
     <header id="header">
       <div class="navbar">
-        <a href="../stuMain.jsp">ÇÐ»ý</a>
-        <a href="searchInfo.html">ÇÐÀû±âº»</a>
+        <a href="../stuMain.jsp">í•™ìƒ</a>
+        <a href="searchInfo.html">í•™ì ê¸°ë³¸</a>
         <div class="dropdown">
-          <button class="dropbtn">¼ö¾÷
+          <button class="dropbtn">ìˆ˜ì—…
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="searchCurriculum.jsp">±³°ú¸ñÁ¶È¸</a>
-            <a href="searchLecTimetable.jsp">°­ÀÇ½Ã°£Ç¥Á¶È¸</a>
-            <a href="searchLecturePlan.jsp">°­ÀÇ°èÈ¹¼­Á¶È¸</a>
+            <a href="searchCurriculum.jsp">êµê³¼ëª©ì¡°íšŒ</a>
+            <a href="searchLecTimetable.jsp">ê°•ì˜ì‹œê°„í‘œì¡°íšŒ</a>
+            <a href="searchLecturePlan.jsp">ê°•ì˜ê³„íšì„œì¡°íšŒ</a>
           </div>
         </div>
-        <a href="searchScholarship.jsp">ÀåÇÐ»ýÇöÈ²</a>
-        <a href="searchReport.jsp">¼ºÀûÇ¥°ü¸®</a>
-        <a href="applyCourse.jsp">¼ö°­½ÅÃ»</a>
+        <a href="searchScholarship.jsp">ìž¥í•™ìƒí˜„í™©</a>
+        <a href="searchReport.jsp">ì„±ì í‘œê´€ë¦¬</a>
+        <a href="applyCourse.jsp">ìˆ˜ê°•ì‹ ì²­</a>
       </div>
     </header>
     
       <form>
       <table id="lectimetable">
         <tr>
-          <th>°ú¸ñ¸í</th>
-           <td>¼ÒÇÁÆ®¿þ¾î °øÇÐ</td>
+          <th>ê³¼ëª©ëª…</th>
+           <td>ì†Œí”„íŠ¸ì›¨ì–´ ê³µí•™</td>
         </tr>
         <tr>
-          <th>°ú¸ñÄÚµå</th>
+          <th>ê³¼ëª©ì½”ë“œ</th>
           <td>2516302</td>
         </tr>
         <tr>
-          <th>±³¼ö¸í</th>
-          <td>À±Ã»</td>
+          <th>êµìˆ˜ëª…</th>
+          <td>ìœ¤ì²­</td>
         </tr>
       </table>
     </form>

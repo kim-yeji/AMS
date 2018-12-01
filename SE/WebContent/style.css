@@ -150,7 +150,6 @@ input {
 header {
   border-bottom: 1px solid grey;
 }
-/* dropdown筌뤴뫖以� 筌롫뗀�뤀 */
 .navbar {
   overflow: hidden;
 }
@@ -201,7 +200,7 @@ td{
 
 
 
-#infotable, #reporttable, #lectimetable {
+#infotable, #reporttable, #lectimetable, #curriculumBar, #curriculumsTable {
 	width: 60%;
 	padding: 20px;
 	text-align: center;
