@@ -34,3 +34,12 @@ function ttBlankFunction() {
 		return;
 	}
 }
+
+function move(url) {
+	location.href=url;
+}
+
+function sendId(){
+	
+}
+

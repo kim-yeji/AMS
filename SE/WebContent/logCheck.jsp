@@ -23,14 +23,14 @@
 	String pass = bufReader.readLine();
 	String tp = bufReader.readLine();
 	bufReader.close();
-	
 
 	try{
 	if( id.equals(name) && passwd.equals(pass)){
-	%>	<input type="hidden" name="id" value="">
-	
+	%>	<form action="<%=type%>Main.jsp" id="moveId"><input type="hidden" name="stuNum" value="<%=id%>"></form>
+		<script>
+			moveId.submit();
+		</script>
 	<%
-		response.sendRedirect(type+"Main.jsp");
 	}else{%>
 			<script>
 			alert("비밀번호가 맞지 않습니다.");

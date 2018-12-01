@@ -79,6 +79,9 @@
 		if(bw != null)	bw.close();
 	}
 	%>
-
+	<div id="Write_Action">
+		<h1>작업이 완료되었습니다. 메인으로 돌아갑니다.</h1>
+		<a href="#" class="button" type="submit" onclick="move('manMain.jsp');"/>확인</a>
+	</div>
 </body>
 </html>
