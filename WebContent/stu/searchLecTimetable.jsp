@@ -30,24 +30,27 @@
         <a href="applyCourse.jsp">수강신청</a>
       </div>
     </header>
-    
-      <form>
-      <table id="lectimetable">
-        <tr>
-          <th>과목명</th>
-           <td>소프트웨어 공학</td>
-        </tr>
-        <tr>
-          <th>과목코드</th>
-          <td>2516302</td>
-        </tr>
-        <tr>
-          <th>교수명</th>
-          <td>윤청</td>
-        </tr>
-      </table>
-    </form>
-    
-    
+    <form id="lectimetableBar" action="searchLecTimetable_form.jsp">
+    	
+		교수명 <input type="text" name="profName">
+		<input type="submit" value="조회">
+	</form>
+	<table id="lecTimeTable">
+		<tr>
+			<th>
+				과목명
+			</th>
+			<th>
+				교수명
+			</th>
+			<th>
+				과목코드
+			</th>
+			<th>
+				수업시간
+			</th>
+		</tr>
+	</table>
+	
   </body>
 </html>

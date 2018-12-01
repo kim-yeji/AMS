@@ -46,6 +46,7 @@
     String subject = request.getParameter("subject");
     String lecCode = request.getParameter("lecCode");
     String profName = request.getParameter("profName");
+    String lecTime = request.getParameter("lecTime");
     
     String fileName = lecCode+".txt";
 	String fileDir = "lecCode";
@@ -64,6 +65,8 @@
 		bw.write(lecCode);
 	  	bw.newLine(); 
 	  	bw.write(profName);
+	  	bw.newLine(); 
+	  	bw.write(lecTime);
 	
 	}catch(Exception e){
 		 System.out.println("데이터를 쓸 수 없습니다.");

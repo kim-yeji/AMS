@@ -51,6 +51,10 @@
           <td><input type="text" name='profName' id="profName"></td>
         </tr>
         <tr>
+          <th>수업시간</th>
+          <td><input type="text" name='lecTime' id="lecTime"></td>
+        </tr>
+        <tr>
           <td colspan="2">
             <button onclick="alertFunction()" type="reset" value="reset">취소</button>
             <input type="submit" value="저장" onclick="ttBlankFunction()">
