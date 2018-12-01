@@ -30,7 +30,14 @@
         <a href="applyCourse.jsp">수강신청</a>
       </div>
     </header>
-
+<table id="lecTimeTable">
+		<tr>
+			<th>
+				과목명
+			</th>
+			
+		</tr>
+	</table>
     
   </body>
 </html>
