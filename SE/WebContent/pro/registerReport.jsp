@@ -1,52 +1,52 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@page import="java.util.*"%>
  <%@page import="java.text.SimpleDateFormat"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
   	<meta charset="UTF-8">
-  	<title>¼ºÀûÃ³¸®</title>
+  	<title>ì„±ì ì²˜ë¦¬</title>
   	<link rel="stylesheet" type="text/css" href="../style.css">
   	<script src="../script.js" type="text/javascript"></script>
   </head>
   <body>
     <header id="header">
       <div class="navbar">
-        <a href="../pro_main.jsp">±³¼ö</a>
-        <a href="registerReport.jsp">¼ºÀûÃ³¸®</a>
-        <a href="registerLecturePlan.jsp">°­ÀÇ°èÈ¹¼­µî·Ï</a>
+        <a href="../pro_main.jsp">êµìˆ˜</a>
+        <a href="registerReport.jsp">ì„±ì ì²˜ë¦¬</a>
+        <a href="registerLecturePlan.jsp">ê°•ì˜ê³„íšì„œë“±ë¡</a>
       </div>
     </header>
     <form>
       <table id="reporttable">
         <tr>
-          <th>ÇÐ°ú</th>
+          <th>í•™ê³¼</th>
           <td>
             <select name='department'>
-                <option value='cse'>ÄÄÇ»ÅÍ°øÇÐ°ú</option>
+                <option value='cse'>ì»´í“¨í„°ê³µí•™ê³¼</option>
             </select>
           </td>
         </tr>
         <tr>
-          <th>ÇÐ¹ø</th>
+          <th>í•™ë²ˆ</th>
           <td><input type="text"></td>
         </tr>
         <tr>
-          <th>ÀÌ¸§</th>
+          <th>ì´ë¦„</th>
           <td><input type="text"></td>
         </tr>
         <tr>
-          <th>°ú¸ñ</th>
+          <th>ê³¼ëª©</th>
           <td>
             <select name='subject'>
-                <option value='os'>¿î¿µÃ¼Á¦</option>
-                <option value='se'>¼ÒÇÁÆ®¿þ¾î°øÇÐ</option>
+                <option value='os'>ìš´ì˜ì²´ì œ</option>
+                <option value='se'>ì†Œí”„íŠ¸ì›¨ì–´ê³µí•™</option>
             </select>
           </td>
         </tr>
         <tr>
-          <th>¼ºÀû</th>
+          <th>ì„±ì </th>
           <td>
             <select name='report'>
                 <option value='ap'>A+</option>
@@ -63,8 +63,8 @@
         </tr>
         <tr>
           <td colspan="2">
-            <button onclick="alertFunction()" type="reset" value="reset">Ãë¼Ò</button>
-            <button type="submit" value="submit">ÀúÀå</button>
+            <button onclick="alertFunction()" type="reset" value="reset">ì·¨ì†Œ</button>
+            <button type="submit" value="submit">ì €ìž¥</button>
         </td>
         </tr>
       </table>
