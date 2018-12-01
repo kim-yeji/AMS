@@ -36,7 +36,7 @@
       </div>
     </header>
 
- <form action = "" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get" margin="auto">
+ <form action = "registerScholarship_F.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get" margin="auto">
           <fieldset style = "width:500px">        
 	         <legend>장학생등록</legend>
 	       <table>
@@ -46,15 +46,15 @@
 	        </tr>
 	  		<tr>
 		  		<td>이름 :</td>
-		  		<td><input type = "text" name = "stuNum"/></td>
+		  		<td><input type = "text" name = "name"/></td>
 	  		</tr>
 		  	<tr>
 		    	<td>학과 :</td>
-	    		<td><input type = "text" name = "stuNum"/></td>
+	    		<td><input type = "text" name = "major"/></td>
 	    	</tr>
 	    	<tr>
 		    	<td>장학 등급:</td>
-		    	<td><input type = "text" name = "stuNum"/></td>
+		    	<td><input type = "text" name = "grade"/></td>
 	       	<tr>
 	       		<td></td>
 	        	 <td><input type="submit" value="등록"></td>
