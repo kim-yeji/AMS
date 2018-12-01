@@ -35,7 +35,7 @@
         <a href="registerScholarship.jsp">장학생등록</a>
       </div>
     </header>
-    <form>
+    <form action="registerCurriculum_form.jsp">
       <table id="reporttable">
         <tr>
           <th>학과</th>
@@ -47,15 +47,15 @@
         </tr>
         <tr>
           <th>과목명</th>
-          <td><input type="text"></td>
+          <td><input type="text" name="subject"></td>
         </tr>
         <tr>
           <th>교수명</th>
-          <td><input type="text"></td>
+          <td><input type="text" name="proName"></td>
         </tr>
         <tr>
           <th>과목코드</th>
-          <td><input type="text"></td>
+          <td><input type="text" name="lecCode"></td>
         </tr>
         <tr>
           <td colspan="2">

@@ -200,13 +200,13 @@ td{
 
 
 
-#infotable, #reporttable, #lectimetable, #curriculumBar, #curriculumsTable {
+#infotable, #reporttable, #lectimetable, #curriculumBar, #curriculumsTable, #reportinfo {
 	width: 60%;
 	padding: 20px;
 	text-align: center;
 	margin: auto;
 }
-#lecPlantable td {
+#lecPlantable {
 	width: 80%;
 	padding: 20px;
 	margin: auto;

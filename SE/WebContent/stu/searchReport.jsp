@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@page import="java.util.*"%>
- <%@page import="java.text.SimpleDateFormat"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="java.util.*"%>
+<%@page import="java.io.*"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -29,6 +29,14 @@
         <a href="searchReport.jsp">성적표관리</a>
         <a href="applyCourse.jsp">수강신청</a>
       </div>
-    </header>
+    </header>  
+    <h3>성적표관리</h3>
+    <form action = "searchReport_form.jsp" class ="formCenter" accept-charset="utf-8" name = "stuInfo" method = "get">
+	    <fieldset style = "width:300px">
+	        <legend>학번조회</legend>
+			학번 : <input type = "text" name = "stuNum"/>
+			<input type="submit" value="조회">
+	    </fieldset><br> 
+    </form>
   </body>
 </html>

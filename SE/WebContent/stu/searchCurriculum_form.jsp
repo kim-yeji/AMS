@@ -43,7 +43,7 @@
 	</form>
 	
 	<%
-    String subject = request.getParameter("subject");
+	String subject = request.getParameter("subject");
     String fileName = subject+".txt";
 	String fileDir = "Curriculum";
 	String filePath = request.getRealPath(fileDir) + "/";
@@ -93,7 +93,6 @@
 	    mktr.appendChild(mktd2);
 	    mktr.appendChild(mktd3);
 	    document.getElementById("curriculumsTable").appendChild(mktr);    	
-    </script>
-    
+    </script>    
   </body>
 </html>
