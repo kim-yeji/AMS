@@ -11,6 +11,9 @@
   	<script src="main.js" type="text/javascript"></script>
   </head>
   <body>
+  <%
+  String id = request.getParameter("id");
+  %>
     <header id="header">
       <div class="navbar">
         <a href="../stuMain.jsp">학생</a>
@@ -33,7 +36,7 @@
     <form id="curriculumBar" action="searchCurriculum_form.jsp">
     	학과<select name='department'>
 	    	<option value='cse'>컴퓨터공학과</option>
-		</select>&nbsp;&nbsp;&nbsp;
+		</select>
 		과목명<input type="text" name="subject">
 		<input type="submit" value="조회">
 	</form>
