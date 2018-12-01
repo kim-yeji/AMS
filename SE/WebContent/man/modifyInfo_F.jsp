@@ -42,10 +42,9 @@
     </header>
     <h3>학적변동</h3>
     <%
-
 	request.setCharacterEncoding("UTF-8");
 
-    String stuNum = request.getParameter("Num");
+    String stuNum = request.getParameter("stuNum");
     String pass = request.getParameter("Modi_pass");
     String name = request.getParameter("Modi_name");
     String major = request.getParameter("Modi_major");
@@ -56,15 +55,11 @@
 	String filePath = request.getRealPath(fileDir) + "/";
 	filePath += fileName;
 	
-	FileWriter fw = null;
+	File f = new File(filePath);
 	BufferedWriter bw = null;
 
-	System.out.print(stuNum);
-	System.out.print(filePath);
 	try{
-		File f = new File(filePath);
-
-		fw = new FileWriter(f); 
+		FileWriter fw = new FileWriter(f); 	
 		bw = new BufferedWriter(fw);
 	
 		bw.write(stuNum);

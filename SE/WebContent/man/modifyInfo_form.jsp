@@ -66,23 +66,23 @@
 	       <table>
 	        <tr>
 		        <td> 학번 :</td>
-		        <td><input type="hidden" namㄷ="stuNum" value="<%=Num%>"> <%=Num%></td>
+		        <td><input type="hidden" name="stuNum" value="<%=Num%>"> <%=Num%></td>
 	        </tr>
 	        <tr>
 		  		<td>비밀번호:</td>
-		  		<td><input type = "text" name = "Modi_pass" value="<%=pass%>"/></td>
+		  		<td><input type = "text" name="Modi_pass" value="<%=pass%>"/></td>
 	  		</tr>
 	  		<tr>
 		  		<td>이름 :</td>
-		  		<td><input type = "text" name = "Modi_stuNum" value="<%=name%>"/></td>
+		  		<td><input type = "text" name="Modi_name" value="<%=name%>"/></td>
 	  		</tr>
 		  	<tr>
 		    	<td>학과 :</td>
-	    		<td><input type = "text" name = "Modi_major"  value="<%=major%>"/></td>
+	    		<td><input type = "text" name="Modi_major"  value="<%=major%>"/></td>
 	    	</tr>
 	    	<tr>
 		    	<td>전화번호:</td>
-		    	<td><input type = "text" name = "Modi_phoneNum"  value="<%=phoneNum%>"/></td>
+		    	<td><input type = "text" name="Modi_phoneNum"  value="<%=phoneNum%>"/></td>
 	       	<tr>
 	       		<td></td>
 	        	 <td><input type="submit" value="수정"></td>
