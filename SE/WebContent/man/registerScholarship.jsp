@@ -1,63 +1,63 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@page import="java.util.*"%>
  <%@page import="java.text.SimpleDateFormat"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
   	<meta charset="UTF-8">
-  	<title>ÀåÇÐ»ýµî·Ï</title>
+  	<title>ìž¥í•™ìƒë“±ë¡</title>
   	<link rel="stylesheet" type="text/css" href="../style.css">
   	<script src="main.js" type="text/javascript"></script>
   </head>
   <body>
     <header id="header">
       <div class="navbar">
-        <a href="../manMain.jsp">ÇÐ»ç´ã´çÀÚ</a>
+        <a href="../manMain.jsp">í•™ì‚¬ë‹´ë‹¹ìž</a>
         <div class="dropdown">
-          <button class="dropbtn">ÇÐÀû°ü¸®
+          <button class="dropbtn">í•™ì ê´€ë¦¬
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="registerNum.jsp">ÇÐ¹øºÎ¿©</a>
-            <a href="modifyInfo.jsp">ÇÐÀûº¯µ¿</a>
+            <a href="registerNum.jsp">í•™ë²ˆë¶€ì—¬</a>
+            <a href="modifyInfo.jsp">í•™ì ë³€ë™</a>
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">±³°ú°ü¸®
+          <button class="dropbtn">êµê³¼ê´€ë¦¬
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="registerCurriculum.jsp">±³°ú¸ñµî·Ï</a>
-            <a href="registerLecTimetable.jsp">°­ÀÇ½Ã°£Ç¥µî·Ï</a>
+            <a href="registerCurriculum.jsp">êµê³¼ëª©ë“±ë¡</a>
+            <a href="registerLecTimetable.jsp">ê°•ì˜ì‹œê°„í‘œë“±ë¡</a>
           </div>
         </div>
-        <a href="registerScholarship.jsp">ÀåÇÐ»ýµî·Ï</a>
+        <a href="registerScholarship.jsp">ìž¥í•™ìƒë“±ë¡</a>
       </div>
     </header>
 
  <form action = "" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get" margin="auto">
           <fieldset style = "width:500px">        
-	         <legend>ÀåÇÐ»ýµî·Ï</legend>
+	         <legend>ìž¥í•™ìƒë“±ë¡</legend>
 	       <table>
 	        <tr>
-		        <td> ÇÐ¹ø :</td>
+		        <td> í•™ë²ˆ :</td>
 		  		<td><input type = "text" name = "stuNum"/></td>
 	        </tr>
 	  		<tr>
-		  		<td>ÀÌ¸§ :</td>
+		  		<td>ì´ë¦„ :</td>
 		  		<td><input type = "text" name = "stuNum"/></td>
 	  		</tr>
 		  	<tr>
-		    	<td>ÇÐ°ú :</td>
+		    	<td>í•™ê³¼ :</td>
 	    		<td><input type = "text" name = "stuNum"/></td>
 	    	</tr>
 	    	<tr>
-		    	<td>ÀåÇÐ µî±Þ:</td>
+		    	<td>ìž¥í•™ ë“±ê¸‰:</td>
 		    	<td><input type = "text" name = "stuNum"/></td>
 	       	<tr>
 	       		<td></td>
-	        	 <td><input type="submit" value="µî·Ï"></td>
+	        	 <td><input type="submit" value="ë“±ë¡"></td>
 	        </tr>
             
            </table>

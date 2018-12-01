@@ -1,66 +1,66 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@page import="java.util.*"%>
  <%@page import="java.text.SimpleDateFormat"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
   	<meta charset="UTF-8">
-  	<title>±³°ú¸ñµî·Ï</title>
+  	<title>êµê³¼ëª©ë“±ë¡</title>
   	<link rel="stylesheet" type="text/css" href="../style.css">
   	<script src="../script.js" type="text/javascript"></script>
   </head>
   <body>
     <header id="header">
       <div class="navbar">
-        <a href="../manMain.jsp">ÇÐ»ç´ã´çÀÚ</a>
+        <a href="../manMain.jsp">í•™ì‚¬ë‹´ë‹¹ìž</a>
         <div class="dropdown">
-          <button class="dropbtn">ÇÐÀû°ü¸®
+          <button class="dropbtn">í•™ì ê´€ë¦¬
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="registerNum.jsp">ÇÐ¹øºÎ¿©</a>
-            <a href="modifyInfo.jsp">ÇÐÀûº¯µ¿</a>
+            <a href="registerNum.jsp">í•™ë²ˆë¶€ì—¬</a>
+            <a href="modifyInfo.jsp">í•™ì ë³€ë™</a>
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">±³°ú°ü¸®
+          <button class="dropbtn">êµê³¼ê´€ë¦¬
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="registerCurriculum.jsp">±³°ú¸ñµî·Ï</a>
-            <a href="registerLecTimetable.jsp">°­ÀÇ½Ã°£Ç¥µî·Ï</a>
+            <a href="registerCurriculum.jsp">êµê³¼ëª©ë“±ë¡</a>
+            <a href="registerLecTimetable.jsp">ê°•ì˜ì‹œê°„í‘œë“±ë¡</a>
           </div>
         </div>
-        <a href="registerScholarship.jsp">ÀåÇÐ»ýµî·Ï</a>
+        <a href="registerScholarship.jsp">ìž¥í•™ìƒë“±ë¡</a>
       </div>
     </header>
     <form>
       <table id="reporttable">
         <tr>
-          <th>ÇÐ°ú</th>
+          <th>í•™ê³¼</th>
           <td>
             <select name='department'>
-                <option value='cse'>ÄÄÇ»ÅÍ°øÇÐ°ú</option>
+                <option value='cse'>ì»´í“¨í„°ê³µí•™ê³¼</option>
             </select>
           </td>
         </tr>
         <tr>
-          <th>°ú¸ñ¸í</th>
+          <th>ê³¼ëª©ëª…</th>
           <td><input type="text"></td>
         </tr>
         <tr>
-          <th>±³¼ö¸í</th>
+          <th>êµìˆ˜ëª…</th>
           <td><input type="text"></td>
         </tr>
         <tr>
-          <th>°ú¸ñÄÚµå</th>
+          <th>ê³¼ëª©ì½”ë“œ</th>
           <td><input type="text"></td>
         </tr>
         <tr>
           <td colspan="2">
-            <button onclick="alertFunction()" type="reset" value="reset">Ãë¼Ò</button>
-            <button type="submit" value="submit">ÀúÀå</button>
+            <button onclick="alertFunction()" type="reset" value="reset">ì·¨ì†Œ</button>
+            <button type="submit" value="submit">ì €ìž¥</button>
         </td>
         </tr>
       </table>
