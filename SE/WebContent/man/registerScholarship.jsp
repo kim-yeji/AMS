@@ -13,7 +13,7 @@
   <body>
     <header id="header">
       <div class="navbar">
-        <a href="../man_main.jsp">학사담당자</a>
+        <a href="../manMain.jsp">학사담당자</a>
         <div class="dropdown">
           <button class="dropbtn">학적관리
             <i class="fa fa-caret-down"></i>
@@ -35,5 +35,33 @@
         <a href="registerScholarship.jsp">장학생등록</a>
       </div>
     </header>
+
+ <form action = "" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get" margin="auto">
+          <fieldset style = "width:500px">        
+	         <legend>장학생등록</legend>
+	       <table>
+	        <tr>
+		        <td> 학번 :</td>
+		  		<td><input type = "text" name = "stuNum"/></td>
+	        </tr>
+	  		<tr>
+		  		<td>이름 :</td>
+		  		<td><input type = "text" name = "stuNum"/></td>
+	  		</tr>
+		  	<tr>
+		    	<td>학과 :</td>
+	    		<td><input type = "text" name = "stuNum"/></td>
+	    	</tr>
+	    	<tr>
+		    	<td>장학 등급:</td>
+		    	<td><input type = "text" name = "stuNum"/></td>
+	       	<tr>
+	       		<td></td>
+	        	 <td><input type="submit" value="등록"></td>
+	        </tr>
+            
+           </table>
+           </fieldset>
+        </form>
   </body>
 </html>

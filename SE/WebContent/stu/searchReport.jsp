@@ -13,7 +13,7 @@
   <body>
     <header id="header">
       <div class="navbar">
-        <a href="../stu_main.jsp">학생</a>
+        <a href="../stuMain.jsp">학생</a>
         <a href="searchInfo.jsp">학적기본</a>
         <div class="dropdown">
           <button class="dropbtn">수업
