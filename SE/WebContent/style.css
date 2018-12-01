@@ -1,3 +1,10 @@
+.formCenter{
+position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  
+}
 
 .signUp {
    position: relative;
@@ -143,7 +150,7 @@ input {
 header {
   border-bottom: 1px solid grey;
 }
-/* dropdown紐⑸줉 硫붾돱 */
+/* dropdown筌뤴뫖以� 筌롫뗀�뤀 */
 .navbar {
   overflow: hidden;
 }

@@ -36,5 +36,14 @@
         <a href="registerScholarship.jsp">장학생등록</a>
       </div>
     </header>
+     <h3>학적변동</h3>
+    <form action = "modifyInfo_form.jsp" class ="formCenter" accept-charset="utf-8" name = "stuInfo" method = "get">
+            <fieldset style = "width:300px">
+                <legend>학번조회</legend>
+         학번 : <input type = "text" name = "stuNum"/>
+         <input type="submit" value="조회">
+             </fieldset>
+            <br> 
+        </form>
   </body>
 </html>
