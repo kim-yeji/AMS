@@ -14,12 +14,13 @@
   	<meta charset="UTF-8">
   	<title>학적변동</title>
   	<link rel="stylesheet" type="text/css" href="../style.css">
-  	<script src="main.js" type="text/javascript"></script>
+  	<script src="../script.js" type="text/javascript"></script>
   </head>
   <body>
+    <%String id = request.getParameter("id");%>
     <header id="header">
       <div class="navbar">
-        <a href="../man_main.jsp">학사담당자</a>
+        <a href="../manMain.jsp">학사담당자</a>
         <div class="dropdown">
           <button class="dropbtn">학적관리
             <i class="fa fa-caret-down"></i>
@@ -80,6 +81,9 @@
 		if(bw != null)	bw.close();
 	}
 	%>
+	 <div id="">
+		<%=id%><a href="#" class="button" type="submit" onclick="move('../login.html');"/>로그아웃</a>
+	</div>
 	</form>
 	<div id="Write_Action">
 		<h1>작업이 완료되었습니다. 메인으로 돌아갑니다.</h1>

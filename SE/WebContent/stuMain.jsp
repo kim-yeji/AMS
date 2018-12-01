@@ -9,10 +9,12 @@
 <meta charset="EUC-KR">
   	<title>학생페이지</title>
   	<link rel="stylesheet" type="text/css" href="style.css">
-  	<script src="main.js" type="text/javascript"></script>
+  	<script src="script.js" type="text/javascript"></script>
  <header id="header">
+ <%String id = request.getParameter("stuNum"); %>
+
       <div class="navbar">
-        <a href="stu_main.jsp">학생</a>
+        <a href="stuMain.jsp">학생</a>
         <a href="stu/searchInfo.jsp">학적기본</a>
         <div class="dropdown">
           <button class="dropbtn">수업
@@ -24,11 +26,15 @@
             <a href="stu/searchLecturePlan.jsp">강의계획서조회</a>
           </div>
         </div>
-        <a href="stu/searchScholarship.jsp">장학생현황</a>
+        <a href="stu/searchScholarship.jsp" id="">장학생현황</a>
         <a href="stu/searchReport.jsp">성적표관리</a>
         <a href="stu/applyCourse.jsp">수강신청</a>
       </div>
 </header>
 </head>
 <body>
+	<div id="">
+		<%=id%><a href="#" class="button" type="submit" onclick="move('login.html');"/>로그아웃</a>
+	</div>
+</body>
 </html>
