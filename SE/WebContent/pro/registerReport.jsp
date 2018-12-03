@@ -12,13 +12,17 @@
   </head>
   <body>
     <header id="header">
+ <%String id = request.getParameter("id"); %>
       <div class="navbar">
-        <a href="../proMain.jsp">교수</a>
-        <a href="registerReport.jsp">성적처리</a>
-        <a href="registerLecturePlan.jsp">강의계획서등록</a>
+        <a href="../proMain.jsp?id=<%=id%>">교수</a>
+        <a href="registerReport.jsp?id=<%=id%>">성적처리</a>
+        <a href="registerLecturePlan.jsp?id=<%=id%>">강의계획서등록</a>
       </div>
-    </header>
-    <form action="registerReport_form.jsp">
+    </header>    
+		<%=id%><a href="../login.html"/>로그아웃</a>
+    <form action="registerReport_form.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo">
+       <fieldset style = "width:500px">        
+	         <legend>성적처리</legend>
       <table id="reporttable">
         <tr>
           <th>학과</th>
@@ -58,12 +62,16 @@
           </td>
         </tr>
         <tr>
+        <td><input type="hidden" name="id" value="<%=id%>"></td>
+        </tr>
+        <tr>
           <td colspan="2">
             <button onclick="alertFunction()" type="reset" value="reset">취소</button>
             <button type="submit" value="submit">저장</button>
         </td>
         </tr>
       </table>
+      </fieldset>
     </form>
   </body>
 </html>
