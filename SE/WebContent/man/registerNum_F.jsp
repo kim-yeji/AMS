@@ -6,6 +6,7 @@
 <%@page import="java.text.DecimalFormat" %>
 <%@page import="java.text.SimpleDateFormat" %>
 <%@page import="java.util.Calendar" %>
+<% request.setCharacterEncoding("euc-kr"); %>
  
 <!DOCTYPE html>
 <html lang="ko">
@@ -16,7 +17,7 @@
   	<script src="../script.js" type="text/javascript"></script>
   </head>
   <body>
-      <%String id = request.getParameter("id");%>
+ <%String id = request.getParameter("id"); %>
     <header id="header">
       <div class="navbar">
         <a href="../manMain.jsp?id=<%=id%>">학사담당자</a>
@@ -43,57 +44,53 @@
     </header>
     <h3>학적변동</h3>
     <%
-    String Num = request.getParameter("stuNum");
+	request.setCharacterEncoding("UTF-8");
+
+    String stuNum = request.getParameter("stuNum");
+    String pass = request.getParameter("pass");
+    String name = request.getParameter("name");
+    String major = request.getParameter("major");
+    String phoneNum = request.getParameter("phoneNum");
     
-    String fileName = Num+".txt";
+    String fileName = stuNum+".txt";
 	String fileDir = "ID";
 	String filePath = request.getRealPath(fileDir) + "/";
 	filePath += fileName;
+
+	BufferedWriter bw = null;
 	
-	FileReader filereader = new FileReader(filePath);
-	BufferedReader bufReader = new BufferedReader(filereader);
-	String stuNum = bufReader.readLine();
-	String pass = bufReader.readLine();
-	String name = bufReader.readLine();
-	String major = bufReader.readLine();
-	String phoneNum = bufReader.readLine();
-	bufReader.close();
-    
-    %>
-     <div id="">
+	try{
+
+		File f = new File(filePath);
+		f.createNewFile();
+		FileWriter fw = new FileWriter(f); 
+		bw = new BufferedWriter(fw);
+	
+		bw.write(stuNum);
+	  	bw.newLine(); 
+		bw.write(pass);
+	  	bw.newLine(); 
+	  	bw.write(name);
+	  	bw.newLine();
+		bw.write(major);
+	  	bw.newLine(); 
+		bw.write(phoneNum);
+	  	bw.newLine(); 
+	
+	}catch(Exception e){
+		 System.out.println("데이터를 쓸 수 없습니다.");
+	}finally{
+		if(bw != null)	bw.close();
+	}
+	%>
+	 <div id="">
 		<%=id%><a href="#" class="button" type="submit" onclick="move('../login.html');"/>로그아웃</a>
 	</div>
- <form action = "modifyInfo_F.jsp?id=<%=id%>" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get">
-          <fieldset style = "width:500px">        
-	         <legend>학적변동</legend>
-	       <table>
-	        <tr>
-		        <td> 학번 :</td>
-		        <td><input type="hidden" name="stuNum" value="<%=Num%>"> <%=Num%></td>
-	        </tr>
-	        <tr>
-		  		<td>비밀번호:</td>
-		  		<td><input type = "text" name="Modi_pass" value="<%=pass%>"/></td>
-	  		</tr>
-	  		<tr>
-		  		<td>이름 :</td>
-		  		<td><input type = "text" name="Modi_name" value="<%=name%>"/></td>
-	  		</tr>
-		  	<tr>
-		    	<td>학과 :</td>
-	    		<td><input type = "text" name="Modi_major"  value="<%=major%>"/></td>
-	    	</tr>
-	    	<tr>
-		    	<td>전화번호:</td>
-		    	<td><input type = "text" name="Modi_phoneNum"  value="<%=phoneNum%>"/></td>
-	       	<tr>
-	       		<td></td>
-	        	 <td><input type="submit" value="수정"></td>
-	        </tr>
-            
-           </table>
-           </fieldset>
-        </form>
-   </body>
-  </html>
-    
+	</form>
+	<div id="Write_Action">
+		<h1>작업이 완료되었습니다. 메인으로 돌아갑니다.</h1>
+		<a href="#" class="button" type="submit" onclick="move('manMain.jsp');"/>확인</a>
+	</div>
+	
+</body>
+</html>
