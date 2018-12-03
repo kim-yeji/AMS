@@ -37,9 +37,9 @@
       </div>
     </header>
  <div id="">
-		<%=id%><a href="#" class="button" type="submit" onclick="move('../login.html');"/>로그아웃</a>
+		<%=id%><a href="../login.html">로그아웃</a>
 	</div>
- <form action = "registerScholarship_F.jsp?id=<%=id%>" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get" margin="auto">
+ <form action = "registerScholarship_F.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get" margin="auto">
           <fieldset style = "width:500px">        
 	         <legend>장학생등록</legend>
 	       <table>
@@ -59,7 +59,7 @@
 		    	<td>장학 등급:</td>
 		    	<td><input type = "text" name = "grade"/></td>
 	       	<tr>
-	       		<td></td>
+	       		<td><input type ="hidden" name ="id" value="<%=id%>"/></td>
 	        	 <td><input type="submit" value="등록"></td>
 	        </tr>
             

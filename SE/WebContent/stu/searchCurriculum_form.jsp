@@ -10,35 +10,40 @@
   <head>
   	<meta charset="UTF-8">
   	<title>교과목조회</title>
+    <%
+    String id = request.getParameter("id");
+	%>
   	<link rel="stylesheet" type="text/css" href="../style.css">
   	<script src="main.js" type="text/javascript"></script>
   </head>
   <body>
     <header id="header">
       <div class="navbar">
-        <a href="../stuMain.jsp">학생</a>
-        <a href="searchInfo.jsp">학적기본</a>
+        <a href="../stuMain.jsp?id=<%=id%>">학생</a>
+        <a href="searchInfo.jsp?id=<%=id%>">학적기본</a>
         <div class="dropdown">
           <button class="dropbtn">수업
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="searchCurriculum.jsp">교과목조회</a>
-            <a href="searchLecTimetable.jsp">강의시간표조회</a>
-            <a href="searchLecturePlan.jsp">강의계획서조회</a>
+            <a href="searchCurriculum.jsp?id=<%=id%>">교과목조회</a>
+            <a href="searchLecTimetable.jsp?id=<%=id%>">강의시간표조회</a>
+            <a href="searchLecturePlan.jsp?id=<%=id%>">강의계획서조회</a>
           </div>
         </div>
-        <a href="searchScholarship.jsp">장학생현황</a>
-        <a href="searchReport.jsp">성적표관리</a>
-        <a href="applyCourse.jsp">수강신청</a>
+        <a href="searchScholarship.jsp?id=<%=id%>">장학생현황</a>
+        <a href="searchReport.jsp?id=<%=id%>">성적표관리</a>
+        <a href="applyCourse.jsp?id=<%=id%>">수강신청</a>
       </div>
     </header>
-
-    <form id="curriculumBar" action="searchCurriculum_form.jsp">
+		<%=id%><a href="../login.html" />로그아웃</a>
+    <form id="curriculumBar" action="searchCurriculum_form.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo">
+    	<fieldset style = "width:800px">  
     	학과<select name='department'>
 	    	<option value='cse'>컴퓨터공학과</option>
-		</select>&nbsp;&nbsp;&nbsp;
+		</select>
 		과목명<input type="text" name="subject">
+		<input type="hidden" name="id" value="<%=id%>">
 		<input type="submit" value="조회">
 	</form>
 	
@@ -114,6 +119,7 @@
 	    document.getElementById("curriculumsTable").appendChild(mktr);
     }
     	
-    </script>    
+    </script>
+	  </fieldset>    
   </body>
 </html>

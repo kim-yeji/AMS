@@ -12,29 +12,26 @@
   	<script src="script.js" type="text/javascript"></script>
  <header id="header">
  <%String id = request.getParameter("id"); %>
-
       <div class="navbar">
-        <a href="stuMain.jsp">학생</a>
-        <a href="stu/searchInfo.jsp">학적기본</a>
+        <a href="stuMain.jsp?id=<%=id%>">학생</a>
+        <a href="stu/searchInfo.jsp?id=<%=id%>">학적기본</a>
         <div class="dropdown">
           <button class="dropbtn">수업
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="stu/searchCurriculum.jsp">교과목조회</a>
-            <a href="stu/searchLecTimetable.jsp">강의시간표조회</a>
-            <a href="stu/searchLecturePlan.jsp">강의계획서조회</a>
+            <a href="stu/searchCurriculum.jsp?id=<%=id%>">교과목조회</a>
+            <a href="stu/searchLecTimetable.jsp?id=<%=id%>">강의시간표조회</a>
+            <a href="stu/searchLecturePlan.jsp?id=<%=id%>">강의계획서조회</a>
           </div>
         </div>
-        <a href="stu/searchScholarship.jsp" id="">장학생현황</a>
-        <a href="stu/searchReport.jsp">성적표관리</a>
-        <a href="stu/applyCourse.jsp">수강신청</a>
+        <a href="stu/searchScholarship.jsp?id=<%=id%>">장학생현황</a>
+        <a href="stu/searchReport.jsp?id=<%=id%>">성적표관리</a>
+        <a href="stu/applyCourse.jsp?id=<%=id%>">수강신청</a>
       </div>
 </header>
 </head>
-<body>
-	<div id="">
+<body>	
 		<%=id%><a href="#" class="button" type="submit" onclick="move('login.html');"/>로그아웃</a>
-	</div>
-</body>
+	</body>
 </html>

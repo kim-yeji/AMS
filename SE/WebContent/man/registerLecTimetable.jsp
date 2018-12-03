@@ -7,20 +7,21 @@
   <head>
   	<meta charset="UTF-8">
   	<title>강의시간표등록</title>
+      <%String id = request.getParameter("id");%>
   	<link rel="stylesheet" type="text/css" href="../style.css">
   	<script src="main.js" type="text/javascript"></script>
   </head>
   <body>
     <header id="header">
       <div class="navbar">
-        <a href="../manMain.jsp">학사담당자</a>
+        <a href="../manMain.jsp?id=<%=id%>">학사담당자</a>
         <div class="dropdown">
           <button class="dropbtn">학적관리
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="registerNum.jsp">학번부여</a>
-            <a href="modifyInfo.jsp">학적변동</a>
+            <a href="registerNum.jsp?id=<%=id%>">학번부여</a>
+            <a href="modifyInfo.jsp?id=<%=id%>">학적변동</a>
           </div>
         </div>
         <div class="dropdown">
@@ -28,13 +29,17 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="registerCurriculum.jsp">교과목등록</a>
-            <a href="registerLecTimetable.jsp">강의시간표등록</a>
+            <a href="registerCurriculum.jsp?id=<%=id%>">교과목등록</a>
+            <a href="registerLecTimetable.jsp?id=<%=id%>">강의시간표등록</a>
           </div>
         </div>
-        <a href="registerScholarship.jsp">장학생등록</a>
+        <a href="registerScholarship.jsp?id=<%=id%>">장학생등록</a>
       </div>
     </header>
+		<%=id%><a href="../login.html"/>로그아웃</a>
+		<div class ="formCenter" accept-charset="utf-8" name = "stuInfo" >
+	    <fieldset style = "width:620px">
+	        <legend>강의시간표등록</legend>
     <form>
       <table id="lectimetable">
         <tr>
@@ -57,6 +62,7 @@
         </tr>
       </table>
     </form>
-    
+    </fieldset>
+    </div>
   </body>
 </html>

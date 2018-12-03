@@ -13,9 +13,9 @@
     <header id="header">
  <%String id = request.getParameter("id"); %>
       <div class="navbar">
-        <a href="pro_main.jsp">교수</a>
-        <a href="pro/registerReport.jsp">성적처리</a>
-        <a href="pro/registerLecturePlan.jsp">강의계획서등록</a>
+        <a href="pro_main.jsp?id=<%=id%>">교수</a>
+        <a href="pro/registerReport.jsp?id=<%=id%>">성적처리</a>
+        <a href="pro/registerLecturePlan.jsp?id=<%=id%>">강의계획서등록</a>
       </div>
     </header>
     	<div id="">
