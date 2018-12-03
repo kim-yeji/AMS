@@ -14,7 +14,7 @@
     <header id="header">
       <div class="navbar">
         <a href="../stuMain.jsp">학생</a>
-        <a href="searchInfo.html">학적기본</a>
+        <a href="searchInfo.jsp">학적기본</a>
         <div class="dropdown">
           <button class="dropbtn">수업
             <i class="fa fa-caret-down"></i>

@@ -39,8 +39,10 @@
     
     <%
     String subject = request.getParameter("subject");
+    String classes = request.getParameter("classes");
     String proName = request.getParameter("proName");
     String lecCode = request.getParameter("lecCode");
+
     
     String fileName = subject+".txt";
 	String fileDir = "Curriculum";
@@ -51,13 +53,15 @@
 	BufferedWriter bw = null;
 
 	try{
-		FileWriter fw = new FileWriter(f); 	
+		FileWriter fw = new FileWriter(f,true); 	
 		bw = new BufferedWriter(fw);
 	
 		bw.write(subject);
-	  	bw.newLine();
+	  	bw.write(" ");
+	  	bw.write(classes);
+	  	bw.write(" ");
 	  	bw.write(proName);
-	  	bw.newLine();
+	  	bw.write(" ");
 	  	bw.write(lecCode);
 	  	bw.newLine();
 	
@@ -80,15 +84,19 @@
         </tr>
         <tr>
           <th>과목명</th>
-          <td><input type="text" name="subject"></td>
+          <td><input type="text" name="subject" required></td>
+        </tr>
+        <tr>
+          <th>분반</th>
+          <td><input type="text" name="classes" required></td>
         </tr>
         <tr>
           <th>교수명</th>
-          <td><input type="text" name="proName"></td>
+          <td><input type="text" name="proName" required></td>
         </tr>
         <tr>
           <th>과목코드</th>
-          <td><input type="text" name="lecCode"></td>
+          <td><input type="text" name="lecCode" required></td>
         </tr>
         <tr>
           <td colspan="2">

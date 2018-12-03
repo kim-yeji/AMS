@@ -47,15 +47,19 @@
         </tr>
         <tr>
           <th>과목명</th>
-          <td><input type="text" name="subject"></td>
+          <td><input type="text" name="subject" required></td>
+        </tr>
+        <tr>
+          <th>분반</th>
+          <td><input type="text" name="classes" required></td>
         </tr>
         <tr>
           <th>교수명</th>
-          <td><input type="text" name="proName"></td>
+          <td><input type="text" name="proName" required></td>
         </tr>
         <tr>
           <th>과목코드</th>
-          <td><input type="text" name="lecCode"></td>
+          <td><input type="text" name="lecCode" required></td>
         </tr>
         <tr>
           <td colspan="2">

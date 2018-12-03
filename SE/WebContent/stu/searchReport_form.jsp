@@ -40,7 +40,6 @@
 	
 	FileReader filereader = new FileReader(filePath);
 	BufferedReader bufReader = new BufferedReader(filereader);
-	int j = 0;
 	String aa="";
 	ArrayList grade = new ArrayList();
 	while((aa=bufReader.readLine())!=null){
@@ -54,7 +53,6 @@
     %>
     
     <%
-    //String fileName2 = stuNum+".txt";
 	String fileDir2 = "ID";
 	String filePath2 = request.getRealPath(fileDir2) + "/";
 	filePath2 += fileName;
