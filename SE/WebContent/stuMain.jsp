@@ -11,7 +11,7 @@
   	<link rel="stylesheet" type="text/css" href="style.css">
   	<script src="script.js" type="text/javascript"></script>
  <header id="header">
- <%String id = request.getParameter("stuNum"); %>
+ <%String id = request.getParameter("id"); %>
 
       <div class="navbar">
         <a href="stuMain.jsp">ÇÐ»ý</a>
