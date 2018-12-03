@@ -11,7 +11,7 @@
   </head>
   <body>
     <header id="header">
- <%String id = request.getParameter("stuNum"); %>
+ <%String id = request.getParameter("id"); %>
       <div class="navbar">
         <a href="pro_main.jsp">교수</a>
         <a href="pro/registerReport.jsp">성적처리</a>

@@ -26,7 +26,7 @@
 
 	try{
 	if( id.equals(name) && passwd.equals(pass)){
-	%>	<form action="<%=type%>Main.jsp" id="moveId"><input type="hidden" name="stuNum" value="<%=id%>"></form>
+	%>	<form action="<%=type%>Main.jsp" id="moveId"><input type="hidden" name="id" value="<%=id%>"></form>
 		<script>
 			moveId.submit();
 		</script>
