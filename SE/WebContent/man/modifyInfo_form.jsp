@@ -87,8 +87,8 @@
 		    	<td>전화번호:</td>
 		    	<td><input type = "text" name="Modi_phoneNum"  value="<%=phoneNum%>"/></td>
 	       	<tr>
-	       		<td></td>
-	        	 <td><input type="submit" value="수정"></td>
+	       		<td><input type = "text" name="id"  value="<%=id%>"/></td>
+	        	 <td><input type="hidden" value="수정"></td>
 	        </tr>
             
            </table>

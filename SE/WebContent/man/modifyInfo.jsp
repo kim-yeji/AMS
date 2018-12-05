@@ -41,10 +41,11 @@
       <div id="">
 		<%=id%><a href="#" class="button" type="submit" onclick="move('../login.html');"/>로그아웃</a>
 	</div>
-    <form action = "modifyInfo_form.jsp?id=<%=id%>" class ="formCenter" accept-charset="utf-8" name = "stuInfo" method = "get">
+    <form action = "modifyInfo_form.jsp" class ="formCenter" accept-charset="utf-8" name = "stuInfo" method = "get">
             <fieldset style = "width:300px">
                 <legend>학번조회</legend>
          학번 : <input type = "text" name = "stuNum"/>
+         <input type ="hidden" name ="id" value="<%=id%>"/>
          <input type="submit" value="조회">
              </fieldset>
             <br> 
