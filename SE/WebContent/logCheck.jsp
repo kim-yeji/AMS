@@ -6,6 +6,7 @@
 <%@page import="java.text.DecimalFormat" %>
 <%@page import="java.text.SimpleDateFormat" %>
 <%@page import="java.util.Calendar" %>
+
 <% request.setCharacterEncoding("euc-kr"); %>
 
 <%
