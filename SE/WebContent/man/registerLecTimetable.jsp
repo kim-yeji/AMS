@@ -40,7 +40,7 @@
 		<div class ="formCenter" accept-charset="utf-8" name = "stuInfo" >
 	    <fieldset style = "width:620px">
 	        <legend>강의시간표등록</legend>
-    <form>
+    <form action = "registerLecTimetable_F.jsp" accept-charset="utf-8" name = "timetalble" method = "get">
       <table id="lectimetable">
         <tr>
           <th>과목명</th>
@@ -53,6 +53,10 @@
         <tr>
           <th>교수명</th>
           <td><input type="text" name='profName' id="profName"></td>
+        </tr>
+        <tr>
+          <th>수업시간</th>
+          <td><input type="text" name='lecTime' id="lecTime"></td>
         </tr>
         <tr>
           <td colspan="2">
