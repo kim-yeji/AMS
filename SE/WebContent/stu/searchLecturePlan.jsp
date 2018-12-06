@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@page import="java.util.*"%>
- <%@page import="java.text.SimpleDateFormat"%>
+	pageEncoding="UTF-8"%>
+<%@page import="java.util.*"%>
+<%@page import="java.io.IOException"%>
+<%@page import="java.io.*"%>
+<%@page import="java.io.File"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -32,28 +35,45 @@
       </div>
     </header>   
 	<%=id%><a href="../login.html"/>로그아웃</a>
-    <form>
-      <table id="lecPlantable">
-        <tr>
-          <th>과목명</th>
-           <td>소프트웨어 공학</td>
-        </tr>
-        <tr>
-          <th>교과목표</th>
-          <td><p>소프트웨어 공학에 대한 기본 개념을 이해한다. 특히 소프트웨어 시스템 개발에 필요한 생명주기 모델을 바탕으로 요구사항 분석, 설계, 코딩, 테스팅 및 유지보수 각 단계에서 이루어지는 활동과 산출물을 다룬다.</p>
-				이러한 기본적인 학습과정을 바탕으로 학생들이 팀별 프로젝트를 수행하고,
-				프로젝트 수행의 각 과정을 점검받음으로써 프로젝트 수행 능력을 향상시킨다.
-				<p>이를 통해 학생들이 졸업 후 산업체에서 경험하게 되는 소프트웨어 개발의 기술적, 관리적 측면을 습득하게 되고
-				습득한 이론과 실무를 개발 현장에서 쉽게 활용할 수 있도록 한다.</p></td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <button onclick="alertFunction()" type="reset" value="reset">취소</button>
-            <button type="submit" value="submit" onclick="lecBlankFunction()">저장</button>
-        </td>
-        </tr>
-      </table>
-    </form>
-    
+    <form id="lecTimetableBar" action="searchLecturePlan_form.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo">
+		<fieldset style="width: 800px">
+		<legend>강의계획서 조회</legend>
+		과목명
+		<input type="text" name="subject">
+		<input type="hidden" name="id" value="<%=id%>"> 
+		<input type="submit" value="조회">
+	</form>
+	<%
+		String subject = request.getParameter("subject");
+		String[] fileNameList;
+		String fileName = subject+".txt";
+		String fileDir = "lecPlan";
+		String filePath = request.getRealPath(fileDir) + File.separator;
+
+		File file = new File(filePath);
+		fileNameList = file.list();
+		try{					
+			for(int i=0;i<fileNameList.length;i++){
+				fileName = fileNameList[i];	
+				FileReader filereader = new FileReader(filePath + fileName);
+
+				BufferedReader bufReader = new BufferedReader(filereader);
+				subject = bufReader.readLine();
+				
+				String lecPlan = bufReader.readLine();
+
+	%>
+		<table id="lecPlantable">
+			<td><a href="lecPlanRead.jsp?subject=<%=subject%>&id=<%=id%>" ><%=subject%></a></td>
+		</table>
+
+	<%
+				bufReader.close();
+			}
+		}catch(Exception e){
+			out.print("데이터를 쓸 수 없습니다.<br/>");			
+		}
+	%>
+	</fieldset>
   </body>
 </html>
