@@ -200,23 +200,25 @@ td{
 
 
 
-#infotable, #reporttable, #lectimetable, #curriculumBar, #curriculumsTable, #reportinfo {
+#infotable, #reporttable, #lecTimeTable, #curriculumBar, #curriculumsTable, #reportinfo,#lecTimetableBar {
 	width: 60%;
 	padding: 20px;
 	text-align: center;
 	margin: auto;
 }
-#lecPlantable {
+#lecPlantable{
 	width: 80%;
-	padding: 20px;
+	text-align: center;
+	padding: 5px;
 	margin: auto;
 }
-#lecPlantable td button { 
+#lecPlanRead {
+	width: 60%;
+	padding: 20px;
+	text-align: center;
+	margin: auto;
+}
+#back,#lecPlantable td button { 
 
 	text-align: center;
-}
-#lecPlantable {
-	width: 80%;
-	padding: 10px;
-	margin: auto;
 }
