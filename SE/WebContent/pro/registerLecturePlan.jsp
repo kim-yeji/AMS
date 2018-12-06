@@ -21,7 +21,7 @@
     </header>
    	<%=id%><a href="../login.html"/>로그아웃</a>
    		</div>
- <form  class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get">
+ 		<form action="registerLecturePlan_F.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get">
         <fieldset style = "width:700px">
          <legend>강의계획서등록</legend>        
       <table id="lecPlantable">
@@ -30,11 +30,16 @@
            <td><input type="text" name='subject' id="subject"></td>
         </tr>
         <tr>
+          <th>교수명</th>
+           <td><input type="text" name='proName' id="proName"></td>
+        </tr>
+        <tr>
           <th>교과목표</th>
           <td><textarea name="lecPlan" cols="50" rows="10" id="lecPlan" ></textarea></td>
         </tr>
         <tr>
           <td colspan="2">
+          <input type="hidden" name="id" value="<%=id%>">
             <button onclick="alertFunction()" type="reset" value="reset">취소</button>
             <button type="submit" value="submit" onclick="lecBlankFunction()">저장</button>
         </td>
