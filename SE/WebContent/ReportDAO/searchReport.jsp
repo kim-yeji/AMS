@@ -40,7 +40,16 @@
 	String fileDir = "Report";
 	String filePath = request.getRealPath(fileDir) + "/";
 	filePath += fileName;
-	
+
+	File f = new File(filePath);
+	if(!f.exists()){	
+		%><script>
+		alert("성적이 존재하지 않습니다.");
+		history.go(-1); 
+		</script>
+		<% 
+	} 
+	else{
 	FileReader filereader = new FileReader(filePath);
 	BufferedReader bufReader = new BufferedReader(filereader);
 	String aa="";
@@ -128,5 +137,6 @@
     </script>    
 	  </fieldset><br> 
     </div>
+    <%} %>
   </body>
 </html>
