@@ -41,6 +41,10 @@
 	String filePath = request.getRealPath(fileDir) + "/";
 	filePath += fileName;
 	
+	File f = new File(filePath);
+	
+	try{
+		if(f.exists()){
 	FileReader filereader = new FileReader(filePath);
 	BufferedReader bufReader = new BufferedReader(filereader);
 	String aa="";
@@ -133,6 +137,17 @@
 	    
     </script>    
 	  </fieldset><br> 
+	  <%  }else if(!f.exists()){
+		%>
+		<script>
+		alert("해당 학기 성적이 존재하지 않습니다.");
+		history.go(-1); 		
+		</script>	
+	<%}
+	}catch(Exception e){
+			out.print("데이터를 쓸 수 없습니다.<br/>");			
+	}
+		%>
     </div>
   </body>
 </html>

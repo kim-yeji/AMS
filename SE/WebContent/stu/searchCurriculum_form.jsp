@@ -54,6 +54,9 @@
 	String filePath = request.getRealPath(fileDir) + "/";
 	filePath += fileName;
 	
+	File f = new File(filePath);
+	try{
+		if(f.exists()){
 	FileReader filereader = new FileReader(filePath);
 	BufferedReader bufReader = new BufferedReader(filereader);
 	String aa="";
@@ -120,6 +123,17 @@
     }
     	
     </script>
-	  </fieldset>    
+	  </fieldset>  
+	  <%  }else if(!f.exists()){
+		%>
+		<script>
+		alert("존재하지 않는 과목명입니다.");
+		history.go(-1); 		
+		</script>	
+	<%}
+	}catch(Exception e){
+			out.print("데이터를 쓸 수 없습니다.<br/>");			
+	}
+		%>  
   </body>
 </html>
