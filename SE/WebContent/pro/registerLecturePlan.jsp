@@ -27,19 +27,19 @@
       <table id="lecPlantable">
         <tr>
           <th>과목명</th>
-           <td><input type="text" name='subject' id="subject"></td>
+           <td><input type="text" name='subject' id="subject" required></td>
         </tr>
         <tr>
           <th>교수명</th>
-           <td><input type="text" name='proName' id="proName"></td>
+           <td><input type="text" name='proName' id="proName" required></td>
         </tr>
         <tr>
           <th>교과목표</th>
-          <td><textarea name="lecPlan" cols="50" rows="10" id="lecPlan" ></textarea></td>
+          <td><textarea name="lecPlan" cols="50" rows="10" id="lecPlan" required></textarea></td>
         </tr>
         <tr>
           <td colspan="2">
-          <input type="hidden" name="id" value="<%=id%>">
+          <input type="hidden" name="id" value="<%=id%>" >
             <button onclick="alertFunction()" type="reset" value="reset">취소</button>
             <button type="submit" value="submit" onclick="lecBlankFunction()">저장</button>
         </td>

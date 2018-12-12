@@ -44,19 +44,19 @@
       <table id="lectimetable">
         <tr>
           <th>과목명</th>
-           <td><input type="text" name='subject' id="subject"></td>
+           <td><input type="text" name='subject' id="subject" required></td>
         </tr>
         <tr>
           <th>과목코드</th>
-          <td><input type="text" name='lecCode' id="lecCode"></td>
+          <td><input type="text" name='lecCode' id="lecCode" required></td>
         </tr>
         <tr>
           <th>교수명</th>
-          <td><input type="text" name='profName' id="profName"></td>
+          <td><input type="text" name='profName' id="profName" required></td>
         </tr>
         <tr>
-          <th>수업시간</th>
-          <td><input type="text" name='lecTime' id="lecTime"></td>
+          <th>강의시간</th>
+          <td><input type="text" name='lecTime' id="lecTime" required></td>
         </tr>
         <tr>
           <td colspan="2">

@@ -39,7 +39,7 @@
 		<fieldset style="width: 800px">
 		<legend>강의계획서 조회</legend>
 		과목명
-		<input type="text" name="subject">
+		<input type="text" name="subject" required>
 		<input type="hidden" name="id" value="<%=id%>"> 
 		<input type="submit" value="조회">
 	</form>
