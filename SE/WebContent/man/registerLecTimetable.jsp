@@ -40,7 +40,7 @@
 		<div class ="formCenter" accept-charset="utf-8" name = "stuInfo" >
 	    <fieldset style = "width:620px">
 	        <legend>강의시간표등록</legend>
-    <form action = "registerLecTimetable_F.jsp" accept-charset="utf-8" name = "timetalble" method = "get">
+    <form action = "../lecTimetableDAO/registerLecTimetable.jsp" accept-charset="utf-8" name = "timetalble" method = "get">
       <table id="lectimetable">
         <tr>
           <th>과목명</th>

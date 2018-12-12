@@ -21,7 +21,7 @@
     </header>
    	<%=id%><a href="../login.html"/>로그아웃</a>
    		</div>
- 		<form action="registerLecturePlan_F.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get">
+ 		<form action="../lecturePlanDAO/registerLecturePlan.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get">
         <fieldset style = "width:700px">
          <legend>강의계획서등록</legend>        
       <table id="lecPlantable">

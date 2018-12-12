@@ -29,8 +29,8 @@
             <a href="searchLecturePlan.jsp?id=<%=id%>">강의계획서조회</a>
           </div>
         </div>
-        <a href="searchScholarship.jsp?id=<%=id%>">장학생현황</a>
-        <a href="searchReport.jsp?id=<%=id%>">성적표관리</a>
+        <a href="../ScholarshipTuitionDAO/searchScholarship.jsp?id=<%=id%>">장학생현황</a>
+        <a href="../ReportDAO/searchReport.jsp?id=<%=id%>">성적표관리</a>
         <a href="applyCourse.jsp?id=<%=id%>">수강신청</a>
       </div>
     </header>   

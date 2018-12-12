@@ -39,7 +39,7 @@
  <div id="">
 		<%=id%><a href="#" class="button" type="submit" onclick="move('../login.html');"/>로그아웃</a>
 	</div>
-      <form action = "registerNum_F.jsp?id=<%=id%>" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get" margin="auto">
+      <form action = "../AcademicDAO/registerNum.jsp?id=<%=id%>" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get" margin="auto">
           <fieldset style = "width:500px">        
 	         <legend>학번부여</legend>
 	       <table>
@@ -69,6 +69,7 @@
 	        </tr>
             
            </table>
+           <input type="hidden" name="id" value="<%=id%>">
            </fieldset>
         </form>
   </body>

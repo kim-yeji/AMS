@@ -1,12 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@page import="java.util.*"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+        <%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.io.IOException"%>
 <%@page import="java.io.*"%>
-<%@page import="java.text.SimpleDateFormat"%>
-<!DOCTYPE html>
+<%@page import="java.io.File"%>
+<%@page import="java.text.DecimalFormat" %>
+<%@page import="java.text.SimpleDateFormat" %>
+<%@page import="java.util.Calendar" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ko">
   <head>
   	<meta charset="UTF-8">
-  	<title>성적처리</title>
+  	<title>강의계획서 등록</title>
   	<link rel="stylesheet" type="text/css" href="../style.css">
   	<script src="../script.js" type="text/javascript"></script>
   </head>
@@ -20,29 +24,32 @@
       </div>
     </header>
   	<%=id%><a href="../login.html"/>로그아웃</a>
+    <h3>강의계획서 등록</h3>
     <%
 	request.setCharacterEncoding("UTF-8");
 
-    String stuNum = request.getParameter("stuNum");
     String subject = request.getParameter("subject");
-    String grade = request.getParameter("grade");
+    String lecP = request.getParameter("lecPlan");
+    String proName = request.getParameter("proName");
     
-    String fileName = stuNum+".txt";
-	String fileDir = "Report";
-	String filePath = request.getRealPath(fileDir) + "/";
+    String fileName = subject+".txt";
+	String fileDir = "lecPlan";
+	String filePath = request.getRealPath(fileDir) + File.separator;
 	filePath += fileName;
 	
+	System.out.println(filePath);
 	File f = new File(filePath);
 	BufferedWriter bw = null;
 
 	try{
-		FileWriter fw = new FileWriter(f,true); 	
+		FileWriter fw = new FileWriter(f); 	
 		bw = new BufferedWriter(fw);
 	
-	  	bw.write(subject);
-	  	bw.write(" ");
-	  	bw.write(grade);
-	  	bw.newLine();
+		bw.write(subject);
+	  	bw.newLine(); 
+		bw.write(proName);
+		bw.newLine(); 
+		bw.write(lecP);
 	
 	}catch(Exception e){
 		 System.out.println("데이터를 쓸 수 없습니다.");
@@ -52,7 +59,7 @@
 	%>
 	<div id="Write_Action">
 		<h1>작업이 완료되었습니다.</h1>
-		<a href="registerReport.jsp?id=<%=id%>"/>확인</a>
+		<a href="../pro/registerLecturePlan.jsp?id=<%=id%>"/>확인</a>
 	</div>
-  </body>
+</body>
 </html>

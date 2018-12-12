@@ -63,7 +63,7 @@
      <div id="">
 		<%=id%><a href="#" class="button" type="submit" onclick="move('../login.html');"/>로그아웃</a>
 	</div>
- <form action = "modifyInfo_F.jsp?id=<%=id%>" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get">
+ <form action = "../AcademicDAO/modifyInfo.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get">
           <fieldset style = "width:500px">        
 	         <legend>학적변동</legend>
 	       <table>
@@ -86,13 +86,11 @@
 	    	<tr>
 		    	<td>전화번호:</td>
 		    	<td><input type = "text" name="Modi_phoneNum"  value="<%=phoneNum%>"/></td>
-	       	<tr>
-	       		<td><input type = "text" name="id"  value="<%=id%>"/></td>
-	        	 <td><input type="hidden" value="수정"></td>
-	        </tr>
-            
+	       	</tr>
+	       		<input type = "hidden" name="id"  value="<%=id%>"/>           
            </table>
            </fieldset>
+            <input type="submit" value="등록">
         </form>
    </body>
   </html>

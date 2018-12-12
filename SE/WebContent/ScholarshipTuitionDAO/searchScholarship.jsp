@@ -10,7 +10,7 @@
 <html lang="ko">
   <head>
   	<meta charset="UTF-8">
-  	<title>학적기본</title>
+  	<title>장학생현황</title>
       <%String id = request.getParameter("id");%>
   	<link rel="stylesheet" type="text/css" href="../style.css">
   	<script src="main.js" type="text/javascript"></script>
@@ -19,65 +19,74 @@
     <header id="header">
       <div class="navbar">
         <a href="../stuMain.jsp?id=<%=id%>">학생</a>
-        <a href="searchInfo.jsp?id=<%=id%>">학적기본</a>
+        <a href="../stu/searchInfo.jsp?id=<%=id%>">학적기본</a>
         <div class="dropdown">
           <button class="dropbtn">수업
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="searchCurriculum.jsp?id=<%=id%>">교과목조회</a>
-            <a href="searchLecTimetable.jsp?id=<%=id%>">강의시간표조회</a>
-            <a href="searchLecturePlan.jsp?id=<%=id%>">강의계획서조회</a>
+            <a href="../stu/searchCurriculum.jsp?id=<%=id%>">교과목조회</a>
+            <a href="../stu/searchLecTimetable.jsp?id=<%=id%>">강의시간표조회</a>
+            <a href="../stu/searchLecturePlan.jsp?id=<%=id%>">강의계획서조회</a>
           </div>
         </div>
-        <a href="../ScholarshipTuitionDAO/searchScholarship.jsp?id=<%=id%>">장학생현황</a>
+        <a href="../stu/searchScholarship.jsp?id=<%=id%>">장학생현황</a>
         <a href="../ReportDAO/searchReport.jsp?id=<%=id%>">성적표관리</a>
         <a href="applyCourse.jsp?id=<%=id%>">수강신청</a>
       </div>
     </header>
-			<%=id%><a href="../login.html"/>로그아웃</a>
-	
-	<%
+    <%
 	  
 	    String fileName = id+".txt";
-		String fileDir = "ID";
+		String fileDir = "Scholarship";
 		String filePath = request.getRealPath(fileDir) + "/";
 		filePath += fileName;
+
+		File f = new File(filePath);
 		
+		try{
+			if(f.exists()){
 		FileReader filereader = new FileReader(filePath);
 		BufferedReader bufReader = new BufferedReader(filereader);
 		String stuNum = bufReader.readLine();
-		String pass = bufReader.readLine();
 		String name = bufReader.readLine();
 		String major = bufReader.readLine();
-		String phoneNum = bufReader.readLine();
+		String grade = bufReader.readLine();
 		bufReader.close();   
-	    %>
-
-      <div class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get">
-          <fieldset style = "width:200px">        
-	         <legend>학적기본</legend>
+	 %>
+	    
+		<%=id%><a href="../login.html"/>로그아웃</a>
+		<div class ="formCenter" accept-charset="utf-8" name = "stuInfo" >
+	    <fieldset style = "width:600px">
+	        <legend>장학생현황</legend>
 	           <table>
 	        <tr>
 		        <td> 학번 :</td>
-		        <td><%=id%></td>
+		        <td><%=stuNum%></td>
 	        </tr>
 	        <tr>
-		  		<td>비밀번호:</td>
-		  		<td><%=pass%></td>
-	  		</tr>
-	  		<tr>
-		  		<td>이름 :</td>
+		  		<td>이름:</td>
 		  		<td><%=name%></td>
 	  		</tr>
+	  		<tr>
+		  		<td>학과 :</td>
+		  		<td><%=major%></td>
+	  		</tr>
 		  	<tr>
-		    	<td>학과 :</td>
-	    		<td><%=major%></td>
+		    	<td>장학등급 :</td>
+	    		<td><%=grade%>등급</td>
 	    	</tr>
-	    	<tr>
-		    	<td>전화번호:</td>
-		    	<td><%=phoneNum%></td>
            </table>
-    </div>
+	 <%  }else if(!f.exists()){
+		%>
+		<script>
+		alert("장학생이 아닙니다.");
+		history.go(-1); 		
+		</script>	
+	<%}
+	}catch(Exception e){
+			out.print("데이터를 쓸 수 없습니다.<br/>");			
+	}
+		%>
   </body>
 </html>

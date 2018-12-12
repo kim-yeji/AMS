@@ -39,7 +39,7 @@
  <div id="">
 		<%=id%><a href="../login.html">로그아웃</a>
 	</div>
- <form action = "registerScholarship_F.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get" margin="auto">
+ <form action = "../ScholarshipTuitionDAO/registerScholarship.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo" method = "get" margin="auto">
           <fieldset style = "width:500px">        
 	         <legend>장학생등록</legend>
 	       <table>

@@ -37,7 +37,7 @@
       </div>
     </header>
     <%=id%><a href="#" class="button" type="submit" onclick="move('../login.html');"/>로그아웃</a>
-    <form action="registerCurriculum_form.jsp?id=<%=id%>" class ="formCenter" accept-charset="utf-8" name = "stuInfo">
+    <form action="../curriculumDAO/registerCurriculum.jsp?id=<%=id%>" class ="formCenter" accept-charset="utf-8" name = "stuInfo">
        <fieldset style = "width:600px">
                 <legend>교과목등록</legend>
       <table id="reporttable">

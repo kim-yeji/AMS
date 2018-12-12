@@ -20,7 +20,7 @@
       </div>
     </header>    
 		<%=id%><a href="../login.html"/>로그아웃</a>
-    <form action="registerReport_form.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo">
+    <form action="../ReportDAO/registerReport.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo">
        <fieldset style = "width:500px">        
 	         <legend>성적처리</legend>
       <table id="reporttable">

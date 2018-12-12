@@ -6,17 +6,16 @@
 <%@page import="java.text.DecimalFormat" %>
 <%@page import="java.text.SimpleDateFormat" %>
 <%@page import="java.util.Calendar" %>
- 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ko">
-  <head>
+<head>
   	<meta charset="UTF-8">
-  	<title>학적변동</title>
+  	<title>강의시간표등록</title>
   	<link rel="stylesheet" type="text/css" href="../style.css">
   	<script src="../script.js" type="text/javascript"></script>
   </head>
-  <body>
-      <%String id = request.getParameter("id");%>
+<body>
+	<%String id = request.getParameter("id"); %>
     <header id="header">
       <div class="navbar">
         <a href="../manMain.jsp?id=<%=id%>">학사담당자</a>
@@ -41,21 +40,20 @@
         <a href="registerScholarship.jsp?id=<%=id%>">장학생등록</a>
       </div>
     </header>
-    <h3>학적변동</h3>
+    <legend>시간표등록이 완료되었습니다.</legend>
     <%
 	request.setCharacterEncoding("UTF-8");
 
-    String stuNum = request.getParameter("stuNum");
-    String pass = request.getParameter("Modi_pass");
-    String name = request.getParameter("Modi_name");
-    String major = request.getParameter("Modi_major");
-    String phoneNum = request.getParameter("Modi_phoneNum");
+    String subject = request.getParameter("subject");
+    String lecCode = request.getParameter("lecCode");
+    String profName = request.getParameter("profName");
+    String lecTime = request.getParameter("lecTime");
     
-    String fileName = stuNum+".txt";
-	String fileDir = "ID";
-	String filePath = request.getRealPath(fileDir) + "/";
+    String fileName = lecCode+".txt";
+	String fileDir = "lecCode";
+	String filePath = request.getRealPath(fileDir) + File.separator;
 	filePath += fileName;
-	
+	System.out.println(filePath);
 	File f = new File(filePath);
 	BufferedWriter bw = null;
 
@@ -63,16 +61,13 @@
 		FileWriter fw = new FileWriter(f); 	
 		bw = new BufferedWriter(fw);
 	
-		bw.write(stuNum);
+		bw.write(subject);
 	  	bw.newLine(); 
-		bw.write(pass);
+		bw.write(lecCode);
 	  	bw.newLine(); 
-	  	bw.write(name);
-	  	bw.newLine();
-		bw.write(major);
+	  	bw.write(profName);
 	  	bw.newLine(); 
-		bw.write(phoneNum);
-	  	bw.newLine(); 
+	  	bw.write(lecTime);
 	
 	}catch(Exception e){
 		 System.out.println("데이터를 쓸 수 없습니다.");
@@ -80,10 +75,5 @@
 		if(bw != null)	bw.close();
 	}
 	%>
-		<%=id%><a href="#" class="button" type="submit" onclick="move('../login.html');"/>로그아웃</a>
-	<div id="Write_Action">
-		<h1>작업이 완료되었습니다. 메인으로 돌아갑니다.</h1>
-		<a href="#" class="button" type="submit" onclick="move('manMain.jsp');"/>확인</a>
-	</div>
 </body>
 </html>
