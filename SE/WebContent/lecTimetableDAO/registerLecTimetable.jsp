@@ -49,16 +49,31 @@
     String profName = request.getParameter("profName");
     String lecTime = request.getParameter("lecTime");
     
-    String fileName = lecCode+".txt";
-	String fileDir = "lecCode";
+    String fileName = subject+".txt";
+	String fileDir = "Curriculum";
 	String filePath = request.getRealPath(fileDir) + File.separator;
 	filePath += fileName;
-	System.out.println(filePath);
+
 	File f = new File(filePath);
+	if(!f.exists()){	
+		%><script>
+		alert("존재하지 않는 과목입니다.");
+		history.go(-1); 
+		</script>
+	<% 
+	} 
+	
+	if(f.exists()){	
+    fileName = lecCode+".txt";
+	fileDir = "lecCode";
+	filePath = request.getRealPath(fileDir) + File.separator;
+	filePath += fileName;
+	
+	File f2 = new File(filePath);
 	BufferedWriter bw = null;
 
 	try{
-		FileWriter fw = new FileWriter(f); 	
+		FileWriter fw = new FileWriter(f2); 	
 		bw = new BufferedWriter(fw);
 	
 		bw.write(subject);
@@ -74,6 +89,7 @@
 	}finally{
 		if(bw != null)	bw.close();
 	}
+}
 	%>
 </body>
 </html>
