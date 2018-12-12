@@ -14,7 +14,7 @@
  <%String id = request.getParameter("id"); %>
       <div class="navbar">
         <a href="stuMain.jsp?id=<%=id%>">학생</a>
-        <a href="stu/searchInfo.jsp?id=<%=id%>">학적기본</a>
+        <a href="AcademicDAO/searchInfo.jsp?id=<%=id%>">학적기본</a>
         <div class="dropdown">
           <button class="dropbtn">수업
             <i class="fa fa-caret-down"></i>

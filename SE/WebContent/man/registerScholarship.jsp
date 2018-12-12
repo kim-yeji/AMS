@@ -45,19 +45,19 @@
 	       <table>
 	        <tr>
 		        <td> 학번 :</td>
-		  		<td><input type = "text" name = "stuNum"/></td>
+		  		<td><input type = "text" name = "stuNum" required/></td>
 	        </tr>
 	  		<tr>
 		  		<td>이름 :</td>
-		  		<td><input type = "text" name = "name"/></td>
+		  		<td><input type = "text" name = "name" required/></td>
 	  		</tr>
 		  	<tr>
 		    	<td>학과 :</td>
-	    		<td><input type = "text" name = "major"/></td>
+	    		<td><input type = "text" name = "major" required/></td>
 	    	</tr>
 	    	<tr>
 		    	<td>장학 등급:</td>
-		    	<td><input type = "text" name = "grade"/></td>
+		    	<td><input type = "text" name = "grade" required/></td>
 	       	<tr>
 	       		<td><input type ="hidden" name ="id" value="<%=id%>"/></td>
 	        	 <td><input type="submit" value="등록"></td>

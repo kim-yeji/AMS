@@ -18,7 +18,7 @@
     <header id="header">
       <div class="navbar">
         <a href="../stuMain.jsp?id=<%=id%>">학생</a>
-        <a href="searchInfo.jsp?id=<%=id%>">학적기본</a>
+        <a href="../AcademicDAO/searchInfo.jsp?id=<%=id%>">학적기본</a>
         <div class="dropdown">
           <button class="dropbtn">수업
             <i class="fa fa-caret-down"></i>
@@ -34,46 +34,22 @@
         <a href="applyCourse.jsp?id=<%=id%>">수강신청</a>
       </div>
     </header>   
-	<%=id%><a href="../login.html"/>로그아웃</a>
-    <form id="lecTimetableBar" action="searchLecturePlan_form.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo">
+		<%=id%><a href="../login.html"/>로그아웃</a>
+    <form id="curriculumBar" action="searchLecturePlan_form.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo">
 		<fieldset style="width: 800px">
 		<legend>강의계획서 조회</legend>
-		과목명
+		<select name=''>
+	    	<option value='cse'>과목명</option>
+		</select>
 		<input type="text" name="subject" required>
 		<input type="hidden" name="id" value="<%=id%>"> 
 		<input type="submit" value="조회">
-	</form>
-	<%
-		String subject = request.getParameter("subject");
-		String[] fileNameList;
-		String fileName = subject+".txt";
-		String fileDir = "lecPlan";
-		String filePath = request.getRealPath(fileDir) + File.separator;
-
-		File file = new File(filePath);
-		fileNameList = file.list();
-		try{					
-			for(int i=0;i<fileNameList.length;i++){
-				fileName = fileNameList[i];	
-				FileReader filereader = new FileReader(filePath + fileName);
-
-				BufferedReader bufReader = new BufferedReader(filereader);
-				subject = bufReader.readLine();
-				
-				String lecPlan = bufReader.readLine();
-
-	%>
-		<table id="lecPlantable">
-			<td><a href="../lecturePlanDAO/searchLecturePlan.jsp?subject=<%=subject%>&id=<%=id%>" ><%=subject%></a></td>
-		</table>
-
-	<%
-				bufReader.close();
-			}
-		}catch(Exception e){
-			out.print("데이터를 쓸 수 없습니다.<br/>");			
-		}
-	%>
+	<table id="curriculumsTable">
+		<tr>
+			<th>과목명</th>					
+		</tr>
+	</table>
+	</form>	
 	</fieldset>
   </body>
 </html>

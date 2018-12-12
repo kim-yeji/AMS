@@ -56,12 +56,22 @@
 	String fileDir = "ID";
 	String filePath = request.getRealPath(fileDir) + "/";
 	filePath += fileName;
-
+	
+	File f = new File(filePath);
+	
+	if(f.exists()){	
+		%><script>
+		alert("이미 존재하는 학번입니다.");
+		history.go(-1); 
+		</script>
+		<% 
+	} 
+	
+	if(!f.exists()){
 	BufferedWriter bw = null;
 	
 	try{
-
-		File f = new File(filePath);
+		
 		f.createNewFile();
 		FileWriter fw = new FileWriter(f); 
 		bw = new BufferedWriter(fw);
@@ -81,6 +91,7 @@
 		 System.out.println("데이터를 쓸 수 없습니다.");
 	}finally{
 		if(bw != null)	bw.close();
+	}
 	}
 	%>
 	 <div id="">

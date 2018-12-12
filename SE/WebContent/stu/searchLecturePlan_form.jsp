@@ -18,7 +18,7 @@
 	<header id="header">
 	<div class="navbar">
 		<a href="../stuMain.jsp?id=<%=id%>">학생</a> <a
-			href="searchInfo.jsp?id=<%=id%>">학적기본</a>
+			href="../AcademicDAO/searchInfo.jsp?id=<%=id%>">학적기본</a>
 		<div class="dropdown">
 			<button class="dropbtn">
 				수업 <i class="fa fa-caret-down"></i>
@@ -26,7 +26,7 @@
 			<div class="dropdown-content">
 				<a href="searchCurriculum.jsp?id=<%=id%>">교과목조회</a> <a
 					href="searchLecTimetable.jsp?id=<%=id%>">강의시간표조회</a> <a
-					href="../lecturePlanDAO/searchLecturePlan.jsp?id=<%=id%>">강의계획서조회</a>
+					href="searchLecturePlan.jsp?id=<%=id%>">강의계획서조회</a>
 			</div>
 		</div>
 		<a href="../ScholarshipTuitionDAO/searchScholarship.jsp?id=<%=id%>">장학생현황</a> <a
@@ -47,6 +47,9 @@
 		<tr>
 			<th>과목명</th>
 		</tr>
+		<tr>
+		 <td></td>		 
+		</tr>
 
 	</table>
 	<%
@@ -55,6 +58,18 @@
 	String fileDir = "lecPlan";
 	String filePath = request.getRealPath(fileDir) + File.separator;
 	filePath += fileName;
+	
+	File f = new File(filePath);
+	
+	if(!f.exists()){	
+		%><script>
+		alert("과목이 존재하지 않습니다.");
+		history.go(-2); 
+		</script>
+		<% 
+	} 
+	
+	if(f.exists()){
 	FileReader filereader = new FileReader(filePath);
 	BufferedReader bufReader = new BufferedReader(filereader);
 	subject = bufReader.readLine();
@@ -62,13 +77,9 @@
 	bufReader.close();
 	%>
 		<table id="lecPlantable">
-			<td><a href="lecPlanRead.jsp?subject=<%=subject%>&id=<%=id%>" ><%=subject%></a></td>
+			<td><a href="../lecturePlanDAO/searchLecturePlan.jsp?subject=<%=subject%>&id=<%=id%>"><%=subject%></a></td>
 		</table>
-
-	
-	
-    </script>
 	</fieldset>
-
+<%} %>
 </body>
 </html>

@@ -45,23 +45,23 @@
 	       <table>
 	        <tr>
 		        <td> 학번 :</td>
-		  		<td><input type = "text" name = "stuNum"/></td>
+		  		<td><input type = "text" name = "stuNum" required/></td>
 	        </tr>
 	        <tr>
 		  		<td>생년월일 :</td>
-		  		<td><input type = "text" name = "pass"/></td>
+		  		<td><input type = "text" name = "pass" required/></td>
 	  		</tr>
 	  		<tr>
 		  		<td>이름 :</td>
-		  		<td><input type = "text" name = "name"/></td>
+		  		<td><input type = "text" name = "name" required/></td>
 	  		</tr>
 		  	<tr>
 		    	<td>학과 :</td>
-	    		<td><input type = "text" name = "major"/></td>
+	    		<td><input type = "text" name = "major" required/></td>
 	    	</tr>
 	    	 <tr>
 		    	<td>전화번호:</td>
-	    		<td><input type = "text" name = "phoneNum"/></td>
+	    		<td><input type = "text" name = "phoneNum" required/></td>
 	    	</tr>
 	    	<tr>
 	    		<td></td>

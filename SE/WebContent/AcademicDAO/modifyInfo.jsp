@@ -25,8 +25,8 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="registerNum.jsp?id=<%=id%>">학번부여</a>
-            <a href="modifyInfo.jsp?id=<%=id%>">학적변동</a>
+            <a href="../man/registerNum.jsp?id=<%=id%>">학번부여</a>
+            <a href="../man/modifyInfo.jsp?id=<%=id%>">학적변동</a>
           </div>
         </div>
         <div class="dropdown">
@@ -34,11 +34,11 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="registerCurriculum.jsp?id=<%=id%>">교과목등록</a>
-            <a href="registerLecTimetable.jsp?id=<%=id%>">강의시간표등록</a>
+            <a href="../man/registerCurriculum.jsp?id=<%=id%>">교과목등록</a>
+            <a href="../man/registerLecTimetable.jsp?id=<%=id%>">강의시간표등록</a>
           </div>
         </div>
-        <a href="registerScholarship.jsp?id=<%=id%>">장학생등록</a>
+        <a href="../man/registerScholarship.jsp?id=<%=id%>">장학생등록</a>
       </div>
     </header>
     <h3>학적변동</h3>
@@ -57,6 +57,7 @@
 	filePath += fileName;
 	
 	File f = new File(filePath);
+
 	BufferedWriter bw = null;
 
 	try{
@@ -79,11 +80,13 @@
 	}finally{
 		if(bw != null)	bw.close();
 	}
+	
 	%>
 		<%=id%><a href="#" class="button" type="submit" onclick="move('../login.html');"/>로그아웃</a>
 	<div id="Write_Action">
 		<h1>작업이 완료되었습니다. 메인으로 돌아갑니다.</h1>
 		<a href="#" class="button" type="submit" onclick="move('../manMain.jsp?id=<%=id%>');"/>확인</a>
 	</div>
+	<%} %>
 </body>
 </html>

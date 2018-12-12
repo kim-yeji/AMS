@@ -37,10 +37,6 @@
           <td><input type="text" name="stuNum" required></td>
         </tr>
         <tr>
-          <th>이름</th>
-          <td><input type="text" name="stuName" required></td>
-        </tr>
-        <tr>
           <th>과목</th>
           <td><input type="text" name="subject" required></td>
         </tr>
