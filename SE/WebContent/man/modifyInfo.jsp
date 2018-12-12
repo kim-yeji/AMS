@@ -44,7 +44,7 @@
     <form action = "modifyInfo_form.jsp" class ="formCenter" accept-charset="utf-8" name = "stuInfo" method = "get">
             <fieldset style = "width:300px">
                 <legend>학번조회</legend>
-         학번 : <input type = "text" name = "stuNum"/>
+         학번 : <input type = "text" name = "stuNum" required/>
          <input type ="hidden" name ="id" value="<%=id%>"/>
          <input type="submit" value="조회">
              </fieldset>

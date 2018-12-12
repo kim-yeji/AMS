@@ -32,17 +32,32 @@
     String lecP = request.getParameter("lecPlan");
     String proName = request.getParameter("proName");
     
+
     String fileName = subject+".txt";
-	String fileDir = "lecPlan";
-	String filePath = request.getRealPath(fileDir) + File.separator;
+	String fileDir = "Curriculum";
+	String filePath = request.getRealPath(fileDir) + "/";
+	filePath += fileName;
+	File f = new File(filePath);
+	
+
+	if(!f.exists()){	
+		%><script>
+		alert("존재하지 않는 과목입니다.");
+		history.go(-1); 
+		</script>
+		<% 
+	} 
+	else{
+    fileName = subject+".txt";
+	fileDir = "lecPlan";
+	filePath = request.getRealPath(fileDir) + "/";
 	filePath += fileName;
 	
-	System.out.println(filePath);
-	File f = new File(filePath);
+	File f2 = new File(filePath);
 	BufferedWriter bw = null;
 
 	try{
-		FileWriter fw = new FileWriter(f); 	
+		FileWriter fw = new FileWriter(f2); 	
 		bw = new BufferedWriter(fw);
 	
 		bw.write(subject);
@@ -61,5 +76,6 @@
 		<h1>작업이 완료되었습니다.</h1>
 		<a href="../pro/registerLecturePlan.jsp?id=<%=id%>"/>확인</a>
 	</div>
+	<%} %>
 </body>
 </html>

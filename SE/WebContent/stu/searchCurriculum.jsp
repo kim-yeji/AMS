@@ -14,7 +14,7 @@
     <header id="header">
       <div class="navbar">
         <a href="../stuMain.jsp?id=<%=id%>">학생</a>
-        <a href="searchInfo.jsp?id=<%=id%>">학적기본</a>
+        <a href="../AcademicDAO/searchInfo.jsp?id=<%=id%>">학적기본</a>
         <div class="dropdown">
           <button class="dropbtn">수업
             <i class="fa fa-caret-down?id=<%=id%>"></i>
@@ -37,26 +37,18 @@
     	학과<select name='department'>
 	    	<option value='cse'>컴퓨터공학과</option>
 		</select>
-		과목명<input type="text" name="subject">		
+		과목명<input type="text" name="subject" required>		
 		<input type="hidden" name="id" value="<%=id %>">
-		<input type="submit" value="조회">
-	</form>
+		<input type="submit" value="조회">	
 	<table id="curriculumsTable">
 		<tr>
-			<th>
-				과목명
-			</th>
-			<th>
-				분반
-			</th>
-			<th>
-				교수명
-			</th>
-			<th>
-				과목코드
-			</th>
+			<th>과목명</th>
+			<th>분반</th>
+			<th>교수명</th>
+			<th>과목코드</th>
 		</tr>
 	</table>
-	  </fieldset>
+	</form>
+  </fieldset>
   </body>
 </html>

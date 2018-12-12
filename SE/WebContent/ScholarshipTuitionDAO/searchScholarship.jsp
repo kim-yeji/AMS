@@ -19,7 +19,7 @@
     <header id="header">
       <div class="navbar">
         <a href="../stuMain.jsp?id=<%=id%>">학생</a>
-        <a href="../stu/searchInfo.jsp?id=<%=id%>">학적기본</a>
+        <a href="../AcademicDAO/searchInfo.jsp?id=<%=id%>">학적기본</a>
         <div class="dropdown">
           <button class="dropbtn">수업
             <i class="fa fa-caret-down"></i>
@@ -32,7 +32,7 @@
         </div>
         <a href="../stu/searchScholarship.jsp?id=<%=id%>">장학생현황</a>
         <a href="../ReportDAO/searchReport.jsp?id=<%=id%>">성적표관리</a>
-        <a href="applyCourse.jsp?id=<%=id%>">수강신청</a>
+        <a href="../stu/applyCourse.jsp?id=<%=id%>">수강신청</a>
       </div>
     </header>
     <%

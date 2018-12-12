@@ -29,12 +29,25 @@
 			String pass = bufReader.readLine();
 			String tp = bufReader.readLine();
 			
-		if(id.equals(name) && passwd.equals(pass)){
-	%>	<form action="../<%=type%>Main.jsp" id="moveId"><input type="hidden" name="id" value="<%=id%>"></form>
+		if(passwd.equals(pass)){
+			if(name.equals("admin")){
+	%>	<form action="../manMain.jsp" id="moveId"><input type="hidden" name="id" value="<%=id%>"></form>
 		<script>
 			moveId.submit();
 		</script>
 	<%
+			}else if(name.equals("pro")){
+	%>		<form action="../proMain.jsp" id="moveId"><input type="hidden" name="id" value="<%=id%>"></form>
+			<script>
+				moveId.submit();
+			</script>
+	<%		}
+			else{
+	%>		<form action="../stuMain.jsp" id="moveId"><input type="hidden" name="id" value="<%=id%>"></form>
+			<script>
+				moveId.submit();
+			</script>
+	<%		}
 		}else{%>
 		<script>
 		alert("비밀번호가 맞지 않습니다.");

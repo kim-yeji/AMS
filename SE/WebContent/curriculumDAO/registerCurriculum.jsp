@@ -1,8 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@page import="java.util.*"%>
-    <%@page import="java.io.*"%>
- <%@page import="java.text.SimpleDateFormat"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+        <%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.io.IOException"%>
+<%@page import="java.io.*"%>
+<%@page import="java.io.File"%>
+<%@page import="java.text.DecimalFormat" %>
+<%@page import="java.text.SimpleDateFormat" %>
+<%@page import="java.util.Calendar" %>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -54,17 +57,17 @@
 	BufferedWriter bw = null;
 
 	try{
-		FileWriter fw = new FileWriter(f,true); 	
+		FileWriter fw = new FileWriter(f); 	
 		bw = new BufferedWriter(fw);
 	
 		bw.write(subject);
-	  	bw.write(" ");
-	  	bw.write(classes);
-	  	bw.write(" ");
+	  	bw.newLine(); 
+		bw.write(classes);
+	  	bw.newLine(); 
 	  	bw.write(proName);
-	  	bw.write(" ");
-	  	bw.write(lecCode);
 	  	bw.newLine();
+		bw.write(lecCode);
+	  	bw.newLine(); 
 	
 	}catch(Exception e){
 		 System.out.println("데이터를 쓸 수 없습니다.");

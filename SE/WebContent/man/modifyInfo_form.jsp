@@ -49,7 +49,16 @@
 	String fileDir = "ID";
 	String filePath = request.getRealPath(fileDir) + "/";
 	filePath += fileName;
-	
+
+	File f = new File(filePath);
+	if(!f.exists()){	
+		%><script>
+		alert("존재하지 않는 학번입니다.");
+		history.go(-1); 
+		</script>
+		<% 
+	} 
+	if(f.exists()){
 	FileReader filereader = new FileReader(filePath);
 	BufferedReader bufReader = new BufferedReader(filereader);
 	String stuNum = bufReader.readLine();
@@ -73,25 +82,26 @@
 	        </tr>
 	        <tr>
 		  		<td>비밀번호:</td>
-		  		<td><input type = "text" name="Modi_pass" value="<%=pass%>"/></td>
+		  		<td><input type = "text" name="Modi_pass" value="<%=pass%>" required/></td>
 	  		</tr>
 	  		<tr>
 		  		<td>이름 :</td>
-		  		<td><input type = "text" name="Modi_name" value="<%=name%>"/></td>
+		  		<td><input type = "text" name="Modi_name" value="<%=name%>" required/></td>
 	  		</tr>
 		  	<tr>
 		    	<td>학과 :</td>
-	    		<td><input type = "text" name="Modi_major"  value="<%=major%>"/></td>
+	    		<td><input type = "text" name="Modi_major"  value="<%=major%>" required/></td>
 	    	</tr>
 	    	<tr>
 		    	<td>전화번호:</td>
-		    	<td><input type = "text" name="Modi_phoneNum"  value="<%=phoneNum%>"/></td>
+		    	<td><input type = "text" name="Modi_phoneNum"  value="<%=phoneNum%>" required/></td>
 	       	</tr>
 	       		<input type = "hidden" name="id"  value="<%=id%>"/>           
            </table>
            </fieldset>
             <input type="submit" value="등록">
         </form>
+        <%} %>
    </body>
   </html>
     
