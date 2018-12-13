@@ -77,7 +77,7 @@
 	</table>
 </div>
 
-<form id="back" action="searchLecturePlan.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo">
+<form id="back" action="../stu/searchLecturePlan.jsp" class="formCenter" accept-charset="utf-8" id ="stuInfo">
 <input type="hidden" name="id" value="<%=id%>">
 	<input type="submit" value="돌아가기">
 </form>

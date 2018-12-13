@@ -51,17 +51,33 @@
     String major = request.getParameter("major");
     String grade = request.getParameter("grade");
     
+
     String fileName = stuNum+".txt";
-	String fileDir ="Scholarship";
+	String fileDir ="ID";
 	String filePath = request.getRealPath(fileDir) + "/";
 	filePath += fileName;
+    
+	File f = new File(filePath);
 	
-	System.out.println(filePath);
+	if(!f.exists()){	
+		%><script>
+		alert("존재하지 않는 학번입니다.");
+		history.go(-1); 
+		</script>
+		<% 
+	} 
+	
+	else{
+    fileName = stuNum+".txt";
+	fileDir ="Scholarship";
+	filePath = request.getRealPath(fileDir) + "/";
+	filePath += fileName;
+	
 	BufferedWriter bw = null;
 	
 	try{
 
-		File f = new File(filePath);
+		File f2 = new File(filePath);
 		f.createNewFile();
 		FileWriter fw = new FileWriter(f); 
 		bw = new BufferedWriter(fw);
@@ -79,6 +95,7 @@
 		 System.out.println("데이터를 쓸 수 없습니다.");
 	}finally{
 		if(bw != null)	bw.close();
+	}
 	}
 	%>
 	 <div id="">
