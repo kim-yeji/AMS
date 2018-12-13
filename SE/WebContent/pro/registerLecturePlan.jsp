@@ -35,7 +35,7 @@
         </tr>
         <tr>
           <th>교과목표</th>
-          <td><textarea name="lecPlan" cols="50" rows="10" id="lecPlan" required></textarea></td>
+          <td><textarea style="resize:none; name="lecPlan" cols="50" rows="10" id="lecPlan"  required></textarea></td>
         </tr>
         <tr>
           <td colspan="2">
